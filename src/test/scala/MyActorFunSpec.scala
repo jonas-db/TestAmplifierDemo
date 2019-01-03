@@ -18,4 +18,14 @@ class MyActorFunSpec extends FunSuite  with BeforeAndAfterAll {
         println(i)
     }
 
+    test("3") {
+        println(i)
+        aa
+    }
+
+    test("3") {
+        println(i)
+        aa = null
+    }
+
 }
