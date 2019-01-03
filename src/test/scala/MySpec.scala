@@ -6,13 +6,6 @@ import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpecLike}
 class MySpec() extends TestKit(ActorSystem("MySpec")) with ImplicitSender
     with WordSpecLike with Matchers with BeforeAndAfterAll {
 
-    var i:Int = 1
-    var aa:MyActor = null
-
-    override protected def beforeAll(): Unit = {
-        i = 2
-        aa = null
-    }
 
     override def afterAll: Unit = {
         TestKit.shutdownActorSystem(system)
@@ -25,8 +18,6 @@ class MySpec() extends TestKit(ActorSystem("MySpec")) with ImplicitSender
             echo ! SimpleMessage
             expectMsg("hello world")
 
-            i = 3
-            println(aa.toString)
 
             echo ! ComplexMessage(2)
             expectMsg("hello world")
