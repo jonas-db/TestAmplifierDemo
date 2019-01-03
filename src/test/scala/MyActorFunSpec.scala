@@ -10,20 +10,20 @@ class MyActorFunSpec extends FunSuite  with BeforeAndAfterAll {
         aa = null
     }
 
-    test("1")  {
-        println(aa.toString)
-    }
+//    test("1")  {
+//        println(aa.toString)
+//    }
+//
+//    test("2") {
+//        println(i)
+//    }
+//
+//    test("3") {
+//        println(i)
+//        aa
+//    }
 
-    test("2") {
-        println(i)
-    }
-
-    test("3") {
-        println(i)
-        aa
-    }
-
-    test("3") {
+    test("4") {
         println(i)
         aa = null
     }
